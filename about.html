@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Automobile Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #000 0%, #333 100%);
+            padding: 15px 40px;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        header h1 {
+            color: #ff2a2a;
+            margin: 0;
+        }
+        
+        nav a {
+            margin-left: 20px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        nav a:hover {
+            color: #ff2a2a;
+        }
+        
+        .about-section {
+            padding: 40px;
+            background: #fff;
+            max-width: 1200px;
+            margin: 40px auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-section h2 {
+            text-align: center;
+            color: #ff2a2a;
+            margin-bottom: 30px;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .about-text {
+            line-height: 1.6;
+        }
+        
+        .about-text h3 {
+            color: #ff2a2a;
+            margin-top: 20px;
+        }
+        
+        .about-image {
+            text-align: center;
+        }
+        
+        .about-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mission-section,
+        .team-section,
+        .why-choose-us {
+            padding: 40px;
+            background: #fff;
+            max-width: 1200px;
+            margin: 40px auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mission-section h2,
+        .team-section h2,
+        .why-choose-us h2 {
+            text-align: center;
+            color: #ff2a2a;
+            margin-bottom: 30px;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .team-member {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        
+        .why-choose-us ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .why-choose-us li {
+            background: #f9f9f9;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        footer {
+            background: #000;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+        }
+        
+        @media (max-width: 1024px) {
+            .about-section {
+                padding: 30px;
+            }
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about-text {
+                margin-bottom: 30px;
+            }
+            .stats-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 18px;
+            }
+            .stat-item {
+                padding: 18px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+                flex-direction: column;
+                text-align: center;
+            }
+            nav {
+                margin-top: 10px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            nav a {
+                margin-left: 0;
+                margin-right: 15px;
+                font-size: 14px;
+            }
+            .about-section {
+                padding: 20px;
+            }
+            .about-section h2 {
+                font-size: 24px;
+            }
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about-text {
+                margin-bottom: 20px;
+            }
+            .about-text h3 {
+                font-size: 20px;
+            }
+            .about-text p {
+                font-size: 16px;
+            }
+            .stats-section h2 {
+                font-size: 24px;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            .stat-item {
+                padding: 15px;
+            }
+            .stat-item h3 {
+                font-size: 24px;
+            }
+            .stat-item p {
+                font-size: 14px;
+            }
+            .team-section h2 {
+                font-size: 24px;
+            }
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            .team-member {
+                padding: 15px;
+            }
+            .team-member h3 {
+                font-size: 18px;
+            }
+            .team-member p {
+                font-size: 14px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header {
+                padding: 10px 15px;
+            }
+            header h1 {
+                font-size: 24px;
+            }
+            nav a {
+                margin-right: 10px;
+                font-size: 12px;
+            }
+            .about-section {
+                padding: 15px;
+            }
+            .about-section h2 {
+                font-size: 20px;
+            }
+            .about-text h3 {
+                font-size: 18px;
+            }
+            .about-text p {
+                font-size: 14px;
+            }
+            .stats-section h2 {
+                font-size: 20px;
+            }
+            .stat-item {
+                padding: 12px;
+            }
+            .stat-item h3 {
+                font-size: 20px;
+            }
+            .stat-item p {
+                font-size: 12px;
+            }
+            .team-section h2 {
+                font-size: 20px;
+            }
+            .team-member {
+                padding: 12px;
+            }
+            .team-member h3 {
+                font-size: 16px;
+            }
+            .team-member p {
+                font-size: 12px;
+            }
+            footer {
+                padding: 15px;
+                font-size: 14px;
+            }
+            #sos-button {
+                bottom: 15px;
+                right: 15px;
+                width: 50px;
+                height: 50px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div style="display: flex; align-items: center;">
+            <h1>Automobile Gallery</h1>
+            <select id="location-select" style="margin-left: 20px; padding: 5px; background: #333; color: #fff; border: 1px solid #fff; border-radius: 3px;">
+                <option value="umred">Umred</option>
+                <option value="girad">Girad</option>
+            </select>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="booking.html">Booking</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="about-section">
+        <h2>About Automobile Gallery</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Welcome to Automobile Gallery, your trusted partner for premium car and bike services. Founded in 2015, we have been providing top-notch automotive solutions to thousands of satisfied customers across the region.</p>
+                <p>Our commitment to excellence, combined with our team of certified mechanics and state-of-the-art equipment, ensures that your vehicle receives the care it deserves. Whether it's routine maintenance, emergency repairs, or specialized services,
+                    we're here to keep you on the road safely and efficiently.</p>
+                <h3>Our Vision</h3>
+                <p>To be the leading provider of doorstep automobile services, setting new standards in customer satisfaction and service quality.</p>
+                <h3>Our Values</h3>
+                <p>Integrity, professionalism, innovation, and customer-centric approach guide everything we do.</p>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=400&q=80" alt="Automobile Gallery Workshop">
+            </div>
+        </div>
+    </section>
+
+    <section class="mission-section">
+        <h2>Our Mission</h2>
+        <p>At Automobile Gallery, our mission is to revolutionize the way people maintain their vehicles. We bring expert mechanics and advanced tools directly to your doorstep, offering convenient, reliable, and affordable services. Our goal is to ensure
+            every vehicle owner experiences hassle-free maintenance, backed by our guarantee of quality and transparency.</p>
+    </section>
+
+    <section class="team-section">
+        <h2>Meet Our Expert Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=100" alt="John Doe">
+                <h3>John Doe</h3>
+                <p>Chief Mechanic</p>
+                <p>15+ years of experience in automotive repair and maintenance.</p>
+            </div>
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=100" alt="Jane Smith">
+                <h3>Jane Smith</h3>
+                <p>Service Manager</p>
+                <p>Expert in customer service and quality assurance.</p>
+            </div>
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=100" alt="Mike Johnson">
+                <h3>Mike Johnson</h3>
+                <p>EV Specialist</p>
+                <p>Certified in electric vehicle repairs and maintenance.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose-us">
+        <h2>Why Choose Automobile Gallery?</h2>
+        <ul>
+            <li><strong>Doorstep Service:</strong> We come to you, saving you time and hassle.</li>
+            <li><strong>Certified Mechanics:</strong> Our team consists of trained and experienced professionals.</li>
+            <li><strong>Affordable Pricing:</strong> Competitive rates without compromising on quality.</li>
+            <li><strong>Quick Turnaround:</strong> Fast and efficient service to get you back on the road.</li>
+            <li><strong>Genuine Parts:</strong> We use only authentic parts for all repairs and replacements.</li>
+            <li><strong>Customer Satisfaction Guarantee:</strong> Your satisfaction is our top priority.</li>
+        </ul>
+    </section>
+
+    <footer>
+        © 2025 Automobile Gallery | All Rights Reserved
+    </footer>
+
+    <!-- Floating SOS Button -->
+    <div id="sos-button" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+        <button style="background: #ff2a2a; color: #fff; border: none; border-radius: 50%; width: 60px; height: 60px; font-size: 18px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.3);" onclick="callSOS()">SOS</button>
+    </div>
+
+    <script>
+        function callSOS() {
+            window.location.href = 'tel:9527460785';
+        }
+    </script>
+</body>
+
+</html>

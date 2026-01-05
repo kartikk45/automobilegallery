@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Automobile Gallery - GoMechanic Style</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #000 0%, #333 100%);
+            padding: 15px 40px;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        header h1 {
+            color: #ff2a2a;
+            margin: 0;
+        }
+        
+        nav a {
+            margin-left: 20px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        nav a:hover {
+            color: #ff2a2a;
+        }
+        
+        .service-box {
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .service-box:hover {
+            transform: scale(1.05);
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=80') center/cover;
+            height: 400px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 50px;
+            animation: slideInLeft 1s ease-out;
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        .hero h2 {
+            font-size: 40px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+        }
+        
+        .btn {
+            background: linear-gradient(45deg, #ff2a2a, #e02424);
+            padding: 12px 22px;
+            border-radius: 25px;
+            color: #fff;
+            display: inline-block;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 42, 42, 0.3);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 42, 42, 0.4);
+        }
+        
+        .services-section {
+            padding: 40px;
+            background: linear-gradient(135deg, #fff 0%, #f9f9f9 100%);
+            animation: fadeIn 1s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .services-section h2 {
+            text-align: center;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .service-box {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            animation: slideUp 0.5s ease-out;
+        }
+        
+        .service-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-box i {
+            font-size: 2em;
+            color: #ff2a2a;
+            margin-bottom: 10px;
+        }
+        
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        footer {
+            background: #000;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+        }
+        
+        @media (max-width: 1024px) {
+            .hero {
+                height: 350px;
+                padding-left: 30px;
+            }
+            .hero h2 {
+                font-size: 35px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+            .services-section {
+                padding: 30px;
+            }
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 18px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+                flex-direction: column;
+                text-align: center;
+            }
+            nav {
+                margin-top: 10px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            nav a {
+                margin-left: 0;
+                margin-right: 15px;
+                font-size: 14px;
+            }
+            .hero {
+                height: 300px;
+                padding-left: 20px;
+                padding-right: 20px;
+                text-align: center;
+            }
+            .hero h2 {
+                font-size: 28px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+            .btn {
+                padding: 12px 20px;
+                font-size: 16px;
+            }
+            .services-section {
+                padding: 20px;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            .service-box {
+                padding: 15px;
+            }
+            .service-box i {
+                font-size: 1.8em;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header {
+                padding: 10px 15px;
+            }
+            header h1 {
+                font-size: 24px;
+            }
+            nav a {
+                margin-right: 10px;
+                font-size: 12px;
+            }
+            .hero {
+                height: 250px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .hero h2 {
+                font-size: 24px;
+            }
+            .hero p {
+                font-size: 14px;
+            }
+            .btn {
+                padding: 10px 18px;
+                font-size: 14px;
+            }
+            .services-section {
+                padding: 15px;
+            }
+            .services-section h2 {
+                font-size: 24px;
+            }
+            .service-box {
+                padding: 12px;
+            }
+            .service-box i {
+                font-size: 1.5em;
+            }
+            footer {
+                padding: 15px;
+                font-size: 14px;
+            }
+            #sos-button {
+                bottom: 15px;
+                right: 15px;
+                width: 50px;
+                height: 50px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div style="display: flex; align-items: center;">
+            <h1>Automobile Gallery</h1>
+            <select id="location-select" style="margin-left: 20px; padding: 5px; background: #333; color: #fff; border: 1px solid #fff; border-radius: 3px;">
+                <option value="umred">Umred</option>
+                <option value="girad">Girad</option>
+            </select>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="booking.html">Booking</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Premium Car & Bike Service</h2>
+        <p>Doorstep service • Affordable pricing • Expert mechanics</p>
+        <a href="booking.html" class="btn">Book Service</a>
+    </section>
+
+    <section class="services-section">
+        <h2>Our Popular Services</h2>
+        <div class="services-grid">
+            <a href="services.html" class="service-box">
+                <i class="fas fa-car"></i>
+                <div>Car General Service</div>
+            </a>
+            <a href="services.html" class="service-box">
+                <i class="fas fa-motorcycle"></i>
+                <div>Bike Service</div>
+            </a>
+            <a href="services.html" class="service-box">
+                <i class="fas fa-bolt"></i>
+                <div>EV Scooter Repair</div>
+            </a>
+            <a href="services.html" class="service-box">
+                <i class="fas fa-tools"></i>
+                <div>Wheel Alignment</div>
+            </a>
+            <a href="services.html" class="service-box">
+                <i class="fas fa-paint-roller"></i>
+                <div>Denting & Painting</div>
+            </a>
+            <a href="services.html" class="service-box">
+                <i class="fas fa-battery-half"></i>
+                <div>Battery Replacement</div>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 Automobile Gallery | All Rights Reserved
+    </footer>
+
+    <!-- Floating SOS Button -->
+    <div id="sos-button" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+        <button style="background: #ff2a2a; color: #fff; border: none; border-radius: 50%; width: 60px; height: 60px; font-size: 18px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.3);" onclick="callSOS()">SOS</button>
+    </div>
+
+    <script>
+        function callSOS() {
+            window.location.href = 'tel:9527460785';
+        }
+    </script>
+</body>
+
+</html>
