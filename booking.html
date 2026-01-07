@@ -93,9 +93,55 @@
         
         footer {
             background: #000;
-            padding: 20px;
+            padding: 40px 20px;
             color: #fff;
             text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-content .branding {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff2a2a;
+            margin-bottom: 20px;
+        }
+        
+        .footer-content .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-content .contact-info p {
+            margin: 0;
+            font-size: 16px;
+        }
+        
+        .footer-content .contact-info a {
+            color: #ff2a2a;
+            text-decoration: none;
+        }
+        
+        .footer-content .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer-content .copyright {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-content .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
         
         .vehicle-type-selector {
@@ -361,7 +407,15 @@
     </section>
 
     <footer>
-        © 2025 Automobile Gallery | All Rights Reserved
+        <div class="footer-content">
+            <div class="branding">Automobile Gallery</div>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> <a href="mailto:trading4u4@gmail.com">trading4u4@gmail.com</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> New MIDC ,Girad rode,Near Maratha Hotel inner rode leena layout (Automobile Gallery) 441203</p>
+                <p><i class="fab fa-instagram"></i> <a href="https://instagram.com/automobile_gallery_" target="_blank">@automobile_gallery_</a></p>
+            </div>
+            <div class="copyright">© 2025 Automobile Gallery | All Rights Reserved</div>
+        </div>
     </footer>
 
     <script>
