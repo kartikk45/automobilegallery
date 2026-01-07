@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us - Automobile Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
             margin: 0;
@@ -136,9 +137,55 @@
         
         footer {
             background: #000;
-            padding: 20px;
+            padding: 40px 20px;
             color: #fff;
             text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-content .branding {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff2a2a;
+            margin-bottom: 20px;
+        }
+        
+        .footer-content .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-content .contact-info p {
+            margin: 0;
+            font-size: 16px;
+        }
+        
+        .footer-content .contact-info a {
+            color: #ff2a2a;
+            text-decoration: none;
+        }
+        
+        .footer-content .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer-content .copyright {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-content .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
         
         @media (max-width: 1024px) {
@@ -315,7 +362,7 @@
         <h2>About Automobile Gallery</h2>
         <div class="about-content">
             <div class="about-text">
-                <p>Welcome to Automobile Gallery, your trusted partner for premium car and bike services. Founded in 2015, we have been providing top-notch automotive solutions to thousands of satisfied customers across the region.</p>
+                <p>Welcome to Automobile Gallery, your trusted partner for premium car and bike services. Founded in 2025, we have been providing top-notch automotive solutions to thousands of satisfied customers across the region.</p>
                 <p>Our commitment to excellence, combined with our team of certified mechanics and state-of-the-art equipment, ensures that your vehicle receives the care it deserves. Whether it's routine maintenance, emergency repairs, or specialized services,
                     we're here to keep you on the road safely and efficiently.</p>
                 <h3>Our Vision</h3>
@@ -339,20 +386,20 @@
         <h2>Meet Our Expert Team</h2>
         <div class="team-grid">
             <div class="team-member">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=100" alt="John Doe">
-                <h3>John Doe</h3>
+                <img src="" alt="Harsh Somalvar">
+                <h3>Harsh Somalvar</h3>
                 <p>Chief Mechanic</p>
-                <p>15+ years of experience in automotive repair and maintenance.</p>
+                <p>07+ years of experience in automotive repair and maintenance.</p>
             </div>
             <div class="team-member">
-                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=100" alt="Jane Smith">
-                <h3>Jane Smith</h3>
+                <img src="" alt="Kartik Sawarkar">
+                <h3>Kartik Sawarkar</h3>
                 <p>Service Manager</p>
                 <p>Expert in customer service and quality assurance.</p>
             </div>
             <div class="team-member">
-                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=100" alt="Mike Johnson">
-                <h3>Mike Johnson</h3>
+                <img src="" alt="Rupesh khadse">
+                <h3>Rupesh khadse </h3>
                 <p>EV Specialist</p>
                 <p>Certified in electric vehicle repairs and maintenance.</p>
             </div>
@@ -372,7 +419,15 @@
     </section>
 
     <footer>
-        © 2025 Automobile Gallery | All Rights Reserved
+        <div class="footer-content">
+            <div class="branding">Automobile Gallery</div>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> <a href="mailto:trading4u4@gmail.com">trading4u4@gmail.com</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> New MIDC ,Girad rode,Near Maratha Hotel inner rode leena layout (Automobile Gallery) 441203</p>
+                <p><i class="fab fa-instagram"></i> <a href="https://instagram.com/automobile_gallery_" target="_blank">@automobile_gallery_</a></p>
+            </div>
+            <div class="copyright">© 2025 Automobile Gallery | All Rights Reserved</div>
+        </div>
     </footer>
 
     <!-- Floating SOS Button -->
@@ -382,7 +437,7 @@
 
     <script>
         function callSOS() {
-            window.location.href = 'tel:9527460785';
+            window.location.href = 'tel:+919527460785';
         }
     </script>
 </body>
